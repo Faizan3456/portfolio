@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Faizan Fayyaz — DevOps &amp; Cloud Engineer</title>
+<meta name="description" content="Portfolio of Faizan Fayyaz — DevOps / Cloud / SRE engineer specializing in AWS, Terraform, CI/CD, and automation." />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="#home" class="logo">Faizan Fayyaz</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  </nav>
+</header>
+
+<main>
+
+  <section id="home" class="hero container">
+    <p class="eyebrow">Hi, I'm</p>
+    <h1>Faizan Fayyaz</h1>
+    <h2 class="hero-role">DevOps &amp; Cloud Engineer, aspiring SRE</h2>
+    <p class="hero-desc">
+      I build and operate cloud infrastructure on AWS — from Infrastructure as Code with Terraform,
+      to CI/CD pipelines, to production-style reliability engineering with monitoring, automation, and
+      incident runbooks. I also build practical automation tools powered by AI.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    </div>
+    <div class="hero-links">
+      <a href="https://github.com/Faizan3456" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:fznfayyaz@gmail.com">Email</a>
+    </div>
+  </section>
+
+  <section id="about" class="container section">
+    <h2 class="section-title">About</h2>
+    <p>
+      I'm a DevOps-focused engineer who learns by building real infrastructure rather than just studying theory.
+      My work spans provisioning cloud resources by hand, automating deployments with CI/CD, codifying infrastructure
+      with Terraform, and operating production-style systems with the mindset of a Site Reliability Engineer —
+      monitoring, alerting, incident response, and clear documentation.
+    </p>
+    <p>
+      I'm currently based in the UK and looking for DevOps / Cloud / SRE roles, ideally with visa sponsorship support.
+      Alongside infrastructure work, I build practical software — including an AI-powered job search automation
+      tool using Claude and Playwright.
+    </p>
+  </section>
+
+  <section id="skills" class="container section">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Cloud &amp; Infrastructure</h3>
+        <ul><li>AWS (EC2, ALB, IAM, Security Groups)</li><li>Terraform (IaC)</li><li>Linux administration</li></ul>
+      </div>
+      <div class="skill-card">
+        <h3>CI/CD &amp; Automation</h3>
+        <ul><li>GitHub Actions</li><li>Docker</li><li>systemd automation</li></ul>
+      </div>
+      <div class="skill-card">
+        <h3>SRE &amp; Reliability</h3>
+        <ul><li>IBM MQ operations</li><li>Monitoring &amp; alerting design</li><li>Incident response &amp; runbooks</li></ul>
+      </div>
+      <div class="skill-card">
+        <h3>Software &amp; AI</h3>
+        <ul><li>Python</li><li>Claude AI / LLM integration</li><li>Playwright browser automation</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="container section">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+
+      <article class="project-card">
+        <h3>IBM MQ SRE Lab on AWS</h3>
+        <p>Production-style IBM MQ sender/receiver topology on AWS EC2 with Docker, CHLAUTH security remediation,
+        split-horizon monitoring, systemd automation, and simulated incident "game days" with recovery runbooks.</p>
+        <div class="tags"><span>AWS</span><span>Docker</span><span>IBM MQ</span><span>SRE</span></div>
+        <a href="https://github.com/Faizan3456/ibm-mq-sre-lab" target="_blank" rel="noopener">View on GitHub →</a>
+      </article>
+
+      <article class="project-card">
+        <h3>UK Job Agent — Autonomous LinkedIn Application Bot</h3>
+        <p>Autonomous job application bot that searches LinkedIn, scores jobs with Claude AI against a personalized
+        prompt (skills, sponsorship, salary), tailors the CV per role, and auto-applies via Easy Apply and external ATS platforms.</p>
+        <div class="tags"><span>Python</span><span>Claude AI</span><span>Playwright</span></div>
+        <a href="https://github.com/Faizan3456/UK-Job-Agent" target="_blank" rel="noopener">View on GitHub →</a>
+      </article>
+
+      <article class="project-card">
+        <h3>AWS EC2 Behind an Application Load Balancer (Terraform)</h3>
+        <p>Highly available web architecture provisioning multiple EC2 instances behind an ALB, with target groups,
+        health checks, and secure networking — fully managed as code.</p>
+        <div class="tags"><span>Terraform</span><span>AWS ALB</span><span>High Availability</span></div>
+        <a href="https://github.com/Faizan3456/aws-terraform-ec2-alb" target="_blank" rel="noopener">View on GitHub →</a>
+      </article>
+
+      <article class="project-card">
+        <h3>CI/CD Deployment to AWS EC2</h3>
+        <p>GitHub Actions pipeline that automatically deploys website updates to an AWS EC2 instance on every commit,
+        using securely stored credentials and automated Apache restarts.</p>
+        <div class="tags"><span>GitHub Actions</span><span>CI/CD</span><span>AWS EC2</span></div>
+        <a href="https://github.com/Faizan3456/aws-ec2-cicd-website" target="_blank" rel="noopener">View on GitHub →</a>
+      </article>
+
+      <article class="project-card">
+        <h3>AWS EC2 Apache Deployment with Terraform</h3>
+        <p>Secure, reusable Terraform configuration provisioning an EC2 web server — dynamic AMI lookup, restricted
+        SSH access, automated bootstrapping, and full lifecycle management as code.</p>
+        <div class="tags"><span>Terraform</span><span>AWS EC2</span><span>IaC</span></div>
+        <a href="https://github.com/Faizan3456/aws-ec2-terraform-deployment" target="_blank" rel="noopener">View on GitHub →</a>
+      </article>
+
+      <article class="project-card">
+        <h3>EUC Device Management Lab</h3>
+        <p>Hands-on lab environment for end-user computing device management, covering enrollment, configuration,
+        and automation workflows.</p>
+        <div class="tags"><span>PowerShell</span><span>Device Management</span></div>
+        <a href="https://github.com/Faizan3456/euc-device-management-lab" target="_blank" rel="noopener">View on GitHub →</a>
+      </article>
+
+    </div>
+    <p class="projects-more">
+      More projects on <a href="https://github.com/Faizan3456" target="_blank" rel="noopener">github.com/Faizan3456</a>
+    </p>
+  </section>
+
+  <section id="contact" class="container section">
+    <h2 class="section-title">Get in Touch</h2>
+    <p>I'm open to DevOps, Cloud, and SRE opportunities in the UK. Feel free to reach out.</p>
+    <div class="contact-links">
+      <a href="mailto:fznfayyaz@gmail.com" class="btn btn-primary">Email Me</a>
+      <a href="https://github.com/Faizan3456" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Faizan Fayyaz. Built with HTML, CSS &amp; JS.</p>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

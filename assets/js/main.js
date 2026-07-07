@@ -42,3 +42,26 @@ const observer = new IntersectionObserver(
   { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
 );
 revealEls.forEach((el) => observer.observe(el));
+
+document.querySelectorAll(".skills-grid, .projects-grid").forEach((grid) => {
+  [...grid.children].forEach((child, i) => {
+    child.style.transitionDelay = `${i * 90}ms`;
+    child.addEventListener("transitionend", () => { child.style.transitionDelay = ""; }, { once: true });
+  });
+});
+
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (!reduceMotion) {
+  document.querySelectorAll(".project-card").forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = `perspective(700px) rotateX(${(-y * 8).toFixed(2)}deg) rotateY(${(x * 8).toFixed(2)}deg) translateY(-4px)`;
+    });
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "";
+    });
+  });
+}

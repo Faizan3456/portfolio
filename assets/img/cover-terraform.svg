@@ -1,0 +1,48 @@
+<svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1529"/>
+      <stop offset="100%" stop-color="#0b0d14"/>
+    </linearGradient>
+    <radialGradient id="glow5" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#b98cff" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#b98cff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="280" fill="url(#bg5)"/>
+  <circle cx="240" cy="140" r="150" fill="url(#glow5)"/>
+
+  <!-- isometric stacked blocks representing infra as code -->
+  <g stroke="#3a4258" stroke-width="1">
+    <!-- bottom layer -->
+    <g>
+      <polygon points="140,190 190,165 240,190 190,215" fill="#151a29"/>
+      <polygon points="240,190 290,165 340,190 290,215" fill="#181e2e"/>
+    </g>
+    <!-- middle layer -->
+    <g>
+      <polygon points="190,150 240,125 290,150 240,175" fill="#1b2135" stroke="#7c9cff" stroke-opacity="0.4"/>
+    </g>
+    <!-- top block highlighted -->
+    <g>
+      <polygon points="190,110 240,85 290,110 240,135" fill="#20263a" stroke="#b98cff" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <!-- vertical connector lines (like terraform graph) -->
+  <g stroke="#5ee0c5" stroke-width="1.5" opacity="0.7" stroke-dasharray="4 5">
+    <line x1="240" y1="110" x2="240" y2="150">
+      <animate attributeName="stroke-dashoffset" from="0" to="-18" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="240" y1="150" x2="215" y2="177">
+      <animate attributeName="stroke-dashoffset" from="0" to="-18" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="240" y1="150" x2="265" y2="177">
+      <animate attributeName="stroke-dashoffset" from="0" to="-18" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- floating code brackets -->
+  <text x="80" y="90" font-family="monospace" font-size="22" fill="#7c9cff" opacity="0.6">{ }</text>
+  <text x="360" y="220" font-family="monospace" font-size="22" fill="#5ee0c5" opacity="0.6">[ ]</text>
+</svg>

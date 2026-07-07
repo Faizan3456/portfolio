@@ -1,0 +1,42 @@
+<svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f1a1c"/>
+      <stop offset="100%" stop-color="#0b0d14"/>
+    </linearGradient>
+    <radialGradient id="glow6" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#5ee0c5" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#5ee0c5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="280" fill="url(#bg6)"/>
+  <circle cx="240" cy="140" r="150" fill="url(#glow6)"/>
+
+  <!-- laptop -->
+  <g transform="translate(150,110)">
+    <rect x="0" y="0" width="110" height="70" rx="6" fill="#151a29" stroke="#7c9cff" stroke-width="2"/>
+    <rect x="8" y="8" width="94" height="54" rx="2" fill="#0f1119"/>
+    <rect x="16" y="16" width="60" height="6" rx="2" fill="#7c9cff" opacity="0.7"/>
+    <rect x="16" y="28" width="78" height="5" rx="2" fill="#3a4258"/>
+    <rect x="16" y="38" width="50" height="5" rx="2" fill="#3a4258"/>
+    <path d="M-8 70 L118 70 L128 84 L-18 84 Z" fill="#1b2130" stroke="#2a3040"/>
+  </g>
+
+  <!-- phone -->
+  <g transform="translate(290,95)">
+    <rect x="0" y="0" width="46" height="86" rx="8" fill="#151a29" stroke="#b98cff" stroke-width="2"/>
+    <rect x="6" y="10" width="34" height="58" rx="2" fill="#0f1119"/>
+    <circle cx="23" cy="78" r="3" fill="#3a4258"/>
+  </g>
+
+  <!-- shield / conditional access check -->
+  <g transform="translate(205,60)">
+    <path d="M20 0 L38 8 L38 22 C38 34 30 42 20 46 C10 42 2 34 2 22 L2 8 Z" fill="#0f1119" stroke="#5ee0c5" stroke-width="2"/>
+    <path d="M12 22 L18 28 L29 14" fill="none" stroke="#5ee0c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- sync arrows between devices -->
+  <path d="M262 140 C 272 140 278 140 288 140" stroke="#5ee0c5" stroke-width="2" fill="none" stroke-dasharray="4 5" opacity="0.8">
+    <animate attributeName="stroke-dashoffset" from="0" to="-18" dur="1.6s" repeatCount="indefinite"/>
+  </path>
+</svg>

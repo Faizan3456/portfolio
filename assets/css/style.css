@@ -308,7 +308,19 @@ a:hover { text-decoration: none; opacity: 0.85; }
   border-color: color-mix(in srgb, var(--accent) 50%, var(--border));
   background: color-mix(in srgb, var(--accent) 6%, var(--card-bg));
 }
-.skill-icon { font-size: 1.6rem; display: block; margin-bottom: 0.75rem; }
+.skill-icon {
+  font-size: 1.6rem;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  animation: float 4s ease-in-out infinite;
+}
+.skill-card:nth-child(2) .skill-icon { animation-delay: 0.3s; }
+.skill-card:nth-child(3) .skill-icon { animation-delay: 0.6s; }
+.skill-card:nth-child(4) .skill-icon { animation-delay: 0.9s; }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
 .skill-card h3 { margin: 0 0 0.75rem; font-size: 1.05rem; }
 .skill-card ul {
   margin: 0;
@@ -329,9 +341,13 @@ a:hover { text-decoration: none; opacity: 0.85; }
   border-radius: var(--radius);
   padding: 1px;
   background: linear-gradient(140deg, var(--card-border), transparent 40%);
-  transition: transform 0.25s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
-.project-card:hover { transform: translateY(-5px); }
+.project-card:hover {
+  box-shadow: 0 20px 40px -20px color-mix(in srgb, var(--accent) 35%, transparent);
+}
 .project-card:hover::before {
   opacity: 1;
 }
@@ -351,13 +367,27 @@ a:hover { text-decoration: none; opacity: 0.85; }
 }
 .project-card-inner {
   background: var(--card-bg);
-  border-radius: calc(var(--radius) - 1px);
-  padding: 1.75rem;
+  border-radius: 0 0 calc(var(--radius) - 1px) calc(var(--radius) - 1px);
+  padding: 1.5rem 1.75rem 1.75rem;
   height: 100%;
   display: flex;
   flex-direction: column;
   backdrop-filter: blur(6px);
 }
+.project-cover {
+  border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
+  overflow: hidden;
+  aspect-ratio: 480 / 280;
+  background: var(--bg-alt);
+}
+.project-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.project-card:hover .project-cover img { transform: scale(1.06); }
 .project-card h3 { margin-top: 0; font-size: 1.1rem; }
 .project-card p {
   color: var(--text-muted);
@@ -428,7 +458,8 @@ a:hover { text-decoration: none; opacity: 0.85; }
 
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
-  .hero-glow, .scroll-cue span { animation: none; }
+  .hero-glow, .scroll-cue span, .skill-icon { animation: none; }
+  .project-card { transition: none; }
 }
 
 /* Responsive nav */

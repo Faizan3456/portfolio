@@ -1,0 +1,46 @@
+<svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#181529"/>
+      <stop offset="100%" stop-color="#0b0d14"/>
+    </linearGradient>
+    <radialGradient id="glow2" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#b98cff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#b98cff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="280" fill="url(#bg2)"/>
+  <circle cx="240" cy="120" r="160" fill="url(#glow2)"/>
+
+  <!-- network nodes forming loose network -->
+  <g stroke="#4a4468" stroke-width="1.5" opacity="0.7">
+    <line x1="120" y1="90" x2="200" y2="60"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="3s" repeatCount="indefinite"/></line>
+    <line x1="200" y1="60" x2="290" y2="80"/>
+    <line x1="290" y1="80" x2="360" y2="60"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="2.4s" repeatCount="indefinite"/></line>
+    <line x1="120" y1="90" x2="150" y2="170"/>
+    <line x1="150" y1="170" x2="240" y2="200"/>
+    <line x1="240" y1="200" x2="330" y2="175"/>
+    <line x1="330" y1="175" x2="360" y2="60"/>
+    <line x1="200" y1="60" x2="150" y2="170"/>
+    <line x1="290" y1="80" x2="240" y2="200"/>
+  </g>
+  <g fill="#7c9cff">
+    <circle cx="120" cy="90" r="5"/>
+    <circle cx="200" cy="60" r="6"/>
+    <circle cx="290" cy="80" r="6"/>
+    <circle cx="360" cy="60" r="5"/>
+    <circle cx="150" cy="170" r="5"/>
+    <circle cx="240" cy="200" r="7" fill="#5ee0c5"/>
+    <circle cx="330" cy="175" r="5"/>
+  </g>
+
+  <!-- document / CV icon center -->
+  <g transform="translate(210,95)">
+    <rect x="0" y="0" width="60" height="76" rx="6" fill="#0f1119" stroke="#b98cff" stroke-width="2"/>
+    <line x1="12" y1="18" x2="48" y2="18" stroke="#b98cff" stroke-width="2" stroke-linecap="round"/>
+    <line x1="12" y1="32" x2="48" y2="32" stroke="#4a4468" stroke-width="2" stroke-linecap="round"/>
+    <line x1="12" y1="46" x2="36" y2="46" stroke="#4a4468" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="48" cy="58" r="8" fill="none" stroke="#5ee0c5" stroke-width="2"/>
+    <path d="M45 58 l2 3 l5 -5" fill="none" stroke="#5ee0c5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

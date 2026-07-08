@@ -18,7 +18,7 @@ const savedTheme = localStorage.getItem("theme");
 
 function applyTheme(theme) {
   root.setAttribute("data-theme", theme);
-  themeToggle.textContent = theme === "light" ? "🌙" : "☀️";
+  themeToggle.textContent = theme === "light" ? "\u{1F319}" : "\u{2600}\uFE0F";
 }
 
 applyTheme(savedTheme || "dark");
